@@ -30,10 +30,11 @@ const Profile = () => {
         <p>Email: {user.email}</p>
         <br />
         <button onClick={handleFetchPreferences}>Fetch Preferences</button>
-        {user.preferences && (
+        {user.preferences !== null && (
           <div>
             <h2>Preferences</h2>
             <p>Username: {user.preferences.username}</p>
+            <p>Action?: {user.preferences.wants_action.toString()}</p>
           </div>
         )}
     </div>

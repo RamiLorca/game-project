@@ -7,6 +7,7 @@ import type { RootState } from './store';
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import ChangeColor from "./components/ChangeColor";
+import DisplayUserInfo from "./components/DisplayUserInfo";
 
 const App: React.FC = () => {
 
@@ -35,9 +36,17 @@ const App: React.FC = () => {
 
       <Profile />
 
+      <br />
+
       <Login />
 
+      <br />
+
       <ChangeColor />
+
+      <br />
+
+      <DisplayUserInfo />
 
     </div>
   );

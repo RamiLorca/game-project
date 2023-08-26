@@ -47,6 +47,7 @@ export const userSlice = createSlice({
         },
         setUserPreferences: (state, action: PayloadAction<Preferences>) => {
             state.preferences = action.payload;
+            console.log("User Preferences Updated: ", state.preferences);
         },
     },
 });

@@ -47,11 +47,15 @@ export const userSlice = createSlice({
         },
         setUserPreferences: (state, action: PayloadAction<Preferences>) => {
             state.preferences = action.payload;
-            console.log("User Preferences Updated: ", state.preferences);
+        },
+        setUserId: (state, action: PayloadAction<number>) => {
+            if(state.preferences) {
+                state.preferences.user_id = action.payload;
+            }
         },
     },
 });
 
-export const { login, logout, setUserPreferences } = userSlice.actions;
+export const { login, logout, setUserPreferences, setUserId } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import ChangeColor from "./components/ChangeColor";
 import DisplayUserInfo from "./components/DisplayUserInfo";
+import IdSlider from "./components/IdSlider";
 
 const App: React.FC = () => {
 
@@ -47,6 +48,10 @@ const App: React.FC = () => {
       <br />
 
       <DisplayUserInfo />
+
+      <br />
+
+      <IdSlider />
 
     </div>
   );

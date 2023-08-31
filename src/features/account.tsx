@@ -17,12 +17,12 @@ export interface AccountState {
 
 const initialStateValue: AccountState = {
     id: 0,
-    account_id: 2001,
+    account_id: 2002,
     password: "",
     username: "",
     activated: false, 
     balance: 0,
-    authorities: null ,
+    authorities: null,
     token: null
 };
 

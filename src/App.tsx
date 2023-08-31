@@ -9,6 +9,7 @@ import Profile from "./components/Profile";
 import ChangeColor from "./components/ChangeColor";
 import DisplayUserInfo from "./components/DisplayUserInfo";
 import IdSlider from "./components/IdSlider";
+import AccountBalance from "./components/AccountBalance.component";
 import './App.scss'
 
 const App: React.FC = () => {
@@ -53,6 +54,10 @@ const App: React.FC = () => {
       <br />
 
       <IdSlider />
+
+      <br />
+
+      <AccountBalance />
 
     </div>
   );

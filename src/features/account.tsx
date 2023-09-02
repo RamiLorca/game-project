@@ -5,7 +5,6 @@ export interface Authorities {
 }
 
 export interface AccountState {
-    id: number;
     account_id: number;
     username: string;
     password: string;
@@ -16,8 +15,7 @@ export interface AccountState {
 }
 
 const initialStateValue: AccountState = {
-    id: 0,
-    account_id: 2002,
+    account_id: 0,
     password: "",
     username: "",
     activated: false, 
@@ -31,7 +29,7 @@ export const accountSlice = createSlice({
     initialState: initialStateValue,
     reducers: {
         login: (state, action: PayloadAction<AccountState>) => {
-            state.id = action.payload.id;
+            state.account_id = action.payload.account_id;
             state.username = action.payload.username;
             state.password = action.payload.password;
             // state.token = action.payload.token;
@@ -44,8 +42,8 @@ export const accountSlice = createSlice({
         setUsername: (state, action: PayloadAction<string>) => {
             state.username = action.payload;
         },
-        setId: (state, action: PayloadAction<number>) => {
-            state.id = action.payload;
+        setAccountId: (state, action: PayloadAction<number>) => {
+            state.account_id = action.payload;
         },
         setPassword: (state, action: PayloadAction<string>) => {
             state.password = action.payload;
@@ -67,7 +65,7 @@ export const accountSlice = createSlice({
 export const { 
     setAccountBalance, 
     setUsername, 
-    setId, 
+    setAccountId, 
     login, 
     setPassword, 
     setActivated, 

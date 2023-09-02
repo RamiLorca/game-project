@@ -39,3 +39,20 @@ export const fetchLoginDetails = async (username: string, password: string) => {
     throw new Error("Failed to log in");
   }
 };
+
+export const register = async (username: string, password: string) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}/register`, {
+      username,
+      password,
+    });
+    if (response.status === 201) {
+      console.log("Successfully registered as " + username);
+    } else {
+      throw new Error("Failed to register");
+    }
+  } catch (error) {
+    console.error(error);
+    throw new Error("Failed to register");
+  }
+};

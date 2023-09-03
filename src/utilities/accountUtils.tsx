@@ -56,3 +56,13 @@ export const register = async (username: string, password: string) => {
     throw new Error("Failed to register");
   }
 };
+
+export const getSearchSuggestions = (word: string) => {
+
+  return axios.get(`${API_BASE_URL}/usernames?title=${word}`)
+    .then((response) => response.data)
+    .catch((error) => {
+      console.error('Error fetching username suggestions: ', error);
+    });
+
+};

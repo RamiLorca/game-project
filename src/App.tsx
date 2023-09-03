@@ -11,6 +11,7 @@ import DisplayUserInfo from "./components/DisplayUserInfo";
 import IdSlider from "./components/IdSlider";
 import AccountBalance from "./components/AccountBalance.component";
 import './App.scss'
+import UsernameSearch from "./components/UsernameSearch";
 
 const App: React.FC = () => {
 
@@ -58,6 +59,10 @@ const App: React.FC = () => {
       <br />
 
       <AccountBalance />
+
+      <br />
+
+      <UsernameSearch />
 
     </div>
   );
